@@ -1,0 +1,41 @@
+schema = 3
+
+# A throwaway project for testing mbt 3's release pipeline: mbt release,
+# mbt prerelease, and the reusable workflows build3.yml / release3.yml.
+# Its SMP package is NEVER to be received on any system: TSBX is a test id.
+
+[project]
+name = "sbx"
+version = "0.1.0-dev"
+kind = "application"
+
+[toolchain]
+cc370 = "1.4.0"
+libc370 = "2.4.0"
+
+[build]
+include = ["include"]
+
+[lib]
+name = "sbx"
+sources = ["src/greet.c"]
+headers = ["include/greet.h"]
+
+[module.HELLO]
+sources = ["src/hello.c", "src/greet.c"]
+rent = false
+reus = false
+
+[tests]
+rent = false
+reus = false
+
+# a test links only its own file unless it lists more
+[test.TSTHELLO]
+sources = ["test/tsthello.c", "src/greet.c"]
+
+[distribution]
+readme = "README.md"
+
+[smp]
+prefix = "TSBX"
