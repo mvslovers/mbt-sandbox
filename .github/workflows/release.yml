@@ -4,8 +4,8 @@ on:
     tags: ["v*"]
 jobs:
   release:
-    uses: mvslovers/mbt/.github/workflows/release3.yml@feat/v3-release
+    uses: mvslovers/mbt/.github/workflows/release3.yml@main
     permissions:
       contents: write
     with:
-      mbt_ref: feat/v3-release
+      mbt_ref: main

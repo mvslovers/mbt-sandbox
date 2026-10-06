@@ -5,7 +5,7 @@ on:
     branches: [main]
 jobs:
   build:
-    uses: mvslovers/mbt/.github/workflows/build3.yml@feat/v3-release
+    uses: mvslovers/mbt/.github/workflows/build3.yml@main
     with:
-      mbt_ref: feat/v3-release
+      mbt_ref: main
       host_tests: true
