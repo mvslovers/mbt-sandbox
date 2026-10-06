@@ -10,6 +10,7 @@ version = "0.1.1-dev"
 kind = "application"
 
 [toolchain]
+mbt = "3.0"
 cc370 = "1.4.0"
 libc370 = "2.4.0"
 

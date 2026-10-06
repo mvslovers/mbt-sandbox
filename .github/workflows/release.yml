@@ -7,5 +7,3 @@ jobs:
     uses: mvslovers/mbt/.github/workflows/release3.yml@main
     permissions:
       contents: write
-    with:
-      mbt_ref: main
